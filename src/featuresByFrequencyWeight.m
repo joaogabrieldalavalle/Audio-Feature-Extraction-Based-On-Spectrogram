@@ -7,7 +7,7 @@ function Vetor = featuresByFrequencyWeight(dirWAV, timeStart, timeEnd)
             WINDOW=512;
             NOVERLAP=WINDOW/2;
             NFFT=WINDOW;
-            [S,~,~,~] =spectrogram(X,WINDOW,NOVERLAP,NFFT,Fs,'yaxis');
+            [S,T,F,Y] =spectrogram(X,WINDOW,NOVERLAP,NFFT,Fs,'yaxis');
             
  %Salvando a matrix numa varíavel
             Spectrograma = abs(S);
