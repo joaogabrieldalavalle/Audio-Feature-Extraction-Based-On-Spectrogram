@@ -1,0 +1,7 @@
+function [ features ] = featuresOfSnippet( S, inicio, fim, code )
+
+            weightArray = we
+
+
+end
+
