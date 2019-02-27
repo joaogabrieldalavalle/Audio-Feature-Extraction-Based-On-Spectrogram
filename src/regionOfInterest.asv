@@ -1,0 +1,10 @@
+function [ inicio, fim ] = regionOfInterest(S)
+    
+    numberOfCol = size(S,2);
+    inicio = numberOfCol/4;
+    %100 frames = 1s aproximadamente
+    fim = inicio + numberOfCol/2;
+    fix(inicio);%parte inteira da divisão
+    fix(fim);
+end
+

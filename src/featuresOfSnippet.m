@@ -4,7 +4,7 @@ function [ features ] = featuresOfSnippet( S, inicio, fim, code )
     trecho = S(:, inicio:fim);
     features = sum(bsxfun(@times, weightArray, trecho));
 
-    
+ 
 
 
 
