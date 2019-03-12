@@ -1,0 +1,5 @@
+data/input/*
+data/output/*
+
+!data/input/.empty
+!data/output/.empty
