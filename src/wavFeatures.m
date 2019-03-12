@@ -1,4 +1,4 @@
-function spectro = wavFeatures( WAVfile,code )
+function features = wavFeatures( WAVfile,code )
       
         %Lendo o arquivo .wav
         [X,Fs]=audioread(WAVfile);
@@ -12,5 +12,6 @@ function spectro = wavFeatures( WAVfile,code )
         spectro = abs(S);
         [inicio, fim] = regionOfInterest(spectro);%Função que define o intervalo
         features = featuresOfSnippet( spectro, inicio, fim, code );
+        
 end
 
