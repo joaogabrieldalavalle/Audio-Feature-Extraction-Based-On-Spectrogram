@@ -1,12 +1,15 @@
 for code = 1:5
     allFeatures = []; %lista de vetores vazia
-    FileList = dir('..\data\input\*.wav');
-        for File = FileList'
-           features = wavFeatures(File,code);
-           allFeatures = [allFeatures ; features];
+    FileList = dir('*.wav');
+    i = 1;
+    FileList = FileList';
+        for i = 1:25 
+           features = wavFeatures(FileList(i).name,code);
+           features(:,301) = [];
+           allFeatures = [allFeatures ; features];          
         end
     
-    dirVET = sprintf('..\data\output\VetoresCod%d.csv',code);
+    dirVET = sprintf('/VetoresCod%d.csv',code);
     xlswrite(dirVET, allFeatures);
 end
 

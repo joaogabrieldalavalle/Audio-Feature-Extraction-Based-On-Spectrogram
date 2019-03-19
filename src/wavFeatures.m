@@ -8,7 +8,7 @@ function features = wavFeatures( WAVfile,code )
         NFFT=WINDOW;
         [S,~,~,~] =spectrogram(X,WINDOW,NOVERLAP,NFFT,Fs,'yaxis');
         %Salvando a matrix numa variavel
-        
+        S(257,:) = [];
         spectro = abs(S);
         [inicio, fim] = regionOfInterest(spectro);%Função que define o intervalo
         features = featuresOfSnippet( spectro, inicio, fim, code );
